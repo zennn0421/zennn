@@ -1,0 +1,79 @@
+
+# 3。ECS ミ ミ イ、ミ ミ イ、ニー ミ イ、ニー ミ ム ウ、チュウ アアアアチュウ ウ リュ、duJSON ミァァァァァイ アアアァァァァァイ アアアァァァァァイ アアアァァァァァイ アアアアアアア、ト シ テテテトトリィィィ テイヒ ヒリィ リィィィ ヨリト リ リ リィリィ リィィ シ ナウトトテトゥトゥティィィィ イ イ ミィティィィト シ テェェェェェェ シィ ティィィィィィ
+# 莠ャ驛スィー `aws ecs register-task-definition --generate-cli-skeleton` の 出力ニィィィィィィ
+#イーイー ハーイー ハーイー ハーイー ハーイー 下ノ ヘ ーイー ーイー ハーイー ハーイー ハーイー ハーイー ノ ァァ アーアアー ィュ ュ ソ ソェツエゥァァァァァァ
+# ̄ 下ノ ゙ーーーーー ゙ニ シィィィィアアアハィィィィニヘレィ リ リノ `CONTAINER_NAME` ゙ ahamisslei nesayno ゙ノ ゙オ コ ゙ニ テ ゙ニ ノ 名 前 前 ゙ェニ シ キィィィェェノ ゙ェェェェェェ
+ハ シ シ ニト シノ `containerDefinitions` 丿ゞイ シニノ # 出国国。
+#
+#4。`AWS_ACCESS_KEY_ID` F。R 。nean preth norianIAM `AWS_SECRET_ACCESS_KEY` といいいのう 名 preth preth norianIAM ゙ーーーーーーー ゙ーーーーーーーソ イーーーーーーー ch。ch ゙ ゙ ゙ キィィィィィィィ
+# こ の IAM ゥーリー リーリー リーリーーー ゙ーーーーー ゙ーーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーーー ゙ーー
+# と、A Hans, Kiィィーーーゥゥゥゥゥ
+
+名前: Amazon ECS にデプロイする
+
+涿州 涿州:
+ 2月。イ。エー。イ。う 。:
+ 枝: [ 「0ehaiss」 owa ]
+
+ェィーゥゥゥゥゥ？ィーゥゥゥゥゥ:
+ AWS_REGION: MY_AWS_REGION # コ リヲ ア オ ニ ヨニリ ミ ノAWSサァァァ ア アアア アオアア アオアア アオアアアアアールー ゙ー ゙ー イ イ イ イ
+ ECR_リノイヨトリ: MY_ECR_REPOSITORY # こ、li u ay o ay o ay o yan ich araaco dicajo ノ ニイツヅ（中）（グン 2 ）中（）グン 2 （中）（ 2 ）（中）（ ノ）中（）（ ）中（）。ノ（中）（ノ）中（）ノ（中）（ノ）中（）ノ（中）（ノ）中（）ノ（中）ノ
+ ECS_ dicーsu: MY_ECS_ dicーーー # こ リ ウール ゥール ゥールー ガッッ ゙ーーラーラーー アアアールー ノイトッ ト シノッ シノッ シノッ シノッ イドーーーーー
+ ECS_CLUSTER: MY_ECS_CLUSTER # こ リィィーーー ゥゥゥゥゥ
+ ECS_TASK_ajedjo: MY_ECS_TASK_A リイ。 # こ リ ウ ォン ニェールニ マイス ニャンイック ウァールア ア リ ニェールニ ツツゥゥゥゥゥ
+                                               # 莠ァ ハ ゙、 ゙ェェェェ ゙。aws/ミ テ シーーーーー ちィィィィィヅィィィィィィソソソソソ
+ コ シ テ リ？_ 名 前: MY_CONTAINER_NAME # prefession ta hlac ko le oushoul co ヨ ミ テニ ニ ニ ニ ニィ チィィィィィ シ チィィィィィ
+                                               # containerDefinitions t s。h 。冉 生嘴 の シ シニ
+
+蛟竜:
+ 内 勺: 冉 出封 冉
+
+阿哥涔:
+ 涔 テアハミ ミィィィ ニィィィー ゙ーーーー？:
+ 名 前: 瀹シ ノイイ
+ ら みー？ノィィィィィィィ（la miー）゙ー ゙ーー ゥゥゥゥゥゥ: ubuntu-latest
+ 姘涓 ら りーーーー ゙: 生和 嬴涔 の
+
+ イーアアールィーゥゥゥゥゥ:
+    - 名 前: 涔ェ？っ ぢ ぢ 莠 あ おうおうおう ト
+ 冉 冉: 阿 シニニ シ/checkout@v4
+
+    - 名 前: AWS の の ikus ikus の の の 情 ikus ikus ikus シ ノ ノ 莠
+ 冉 冉: aws-actions/configure-aws-credentials@v1
+ と:
+ aws-access-key-id: ${{ ん。aws_access_key_id }}
+ aws-secret-access-key: ${{ ん。aws_secret_access_key }}
+ aws-地偵: ${{ etsuniーgaーーza_REGION }}
+
+    - 名 前: A nietusahinECRni らっ っ し くい
+ id u: 姘和鉱山-ECR
+ 冉 冉: aws-actions/amazon-ecr-login@v1
+
+    - 名 前: 瀹 ゙ー ゙、ハ ゙、ハ ゙ ゙、 ゙、 ゙ フー ゙ ゙ ゙ アマゾン ECR ゙ の ゙ の ゙ の ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙、 ゙
+ id u: 瀹 リハ メールーア ーィィ。
+ ェィーー、そうですね:
+ ECR_ リャイチリ: ${{ ヱテッ ティー チップ。論理イハイン-ecr。出力。リャイドリ }}
+ 涔涔_たーん: ${{ 婁土 瀹。シニァ }}
+ 嬴 れ: |
+ # ドッカー コ オニ テ ニ ウォウ ウ シシシ シ ノ ス
+ # 出封の錫は、ECRに錫、ニシ、シ二出ス
+ # ECS NI リ ミ ニ イック リ ニェ。
+ docker build - t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG。
+ docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+ est coー 「image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG」 出力 su >> $GITHUB_OUTPUT
+
+    - 名 前: A。A。noitotsahinECSハーリート dicーchinguni新語音 の 語 の ID は、 語 語 語 語 語
+ id u: 瀹子牛嘴
+ 冉 冉: aws-actions/amazon-ecs-render-task-definition@v1
+ と:
+ 瀹ッ 匂いの 嘴: ${{ エザニェクス_タスク_定義 }}
+ コニ テ ニ 名: ${{ エニャンコニ テ ニャン_NAME }}
+ 瀹ゥン: ${{ ヱテッ ティー チップ。瀹ーリイ メールーアーイ。出力。瀹影 }}
+
+    - 名 前: Amazon ECS ミッ トトゥゥゥゥゥ
+ 冉 冉: aws-actions/amazon-ecs-deploy-task-definition@v1
+ と:
+ 瀹ッ 匂いの 嘴: ${{ ヱテッ ティー チップ。瀹ー シフニィーン。出力。瀹 ザンの魚嘴 }}
+ idーィィィィ: ${{ ethainzuecs_ dicーーー }}
+ ちーっ ー らーー: ${{ aynzuecs_CLUSTER }}
+ idー ゙ー ぃック の ゙ ゙ ゙ ゙ ゙: 
